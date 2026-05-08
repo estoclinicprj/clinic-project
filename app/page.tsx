@@ -44,24 +44,24 @@ export default function DashboardPage() {
         </header>
 
         {/* Dashboard Content */}
-        <div className="flex h-full flex-col p-4">
+        <div className="p-8">
           {/* Welcome Section */}
-          <div className="mb-4">
+          <div className="mb-8">
             <h1 className="text-2xl font-bold text-foreground">
               Bonjour, bienvenue sur votre tableau de bord
             </h1>
-            <p className="mt-1 text-sm text-muted-foreground">
+            <p className="mt-1 text-muted-foreground">
               Voici un aperçu de votre activité médicale pour aujourd&apos;hui
             </p>
           </div>
 
           {/* Stats Cards */}
-          <section className="mb-4 hidden">
+          <section className="mb-8">
             <StatCards />
           </section>
 
           {/* Consultations Table */}
-          <section className="flex-1 overflow-auto">
+          <section>
             <ConsultationsTable />
           </section>
         </div>
