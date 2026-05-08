@@ -40,16 +40,16 @@ const stats = [
 
 export function StatCards() {
   return (
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+    <div className="flex flex-wrap gap-4">
       {stats.map((stat) => (
         <Card
           key={stat.title}
-          className="group relative overflow-hidden border-0 bg-card shadow-sm transition-all duration-300 hover:shadow-md"
+          className="group relative flex-1 min-w-fit overflow-hidden border-0 bg-card shadow-sm transition-all duration-300 hover:shadow-md"
         >
-          <CardContent className="p-6">
-            <div className="flex items-start justify-between">
-              <div className="space-y-3">
-                <p className="text-sm font-medium text-muted-foreground">
+          <CardContent className="flex h-auto w-auto flex-col p-6">
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex flex-col gap-2">
+                <p className="whitespace-nowrap text-sm font-medium text-muted-foreground">
                   {stat.title === "Consultations Aujourd'hui" ? "Consultations Aujourd'hui" : stat.title}
                 </p>
                 <div className="flex items-baseline gap-2">
@@ -68,7 +68,7 @@ export function StatCards() {
                 </div>
                 <p className="text-xs text-muted-foreground">{stat.description}</p>
               </div>
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary/15">
+              <div className="flex shrink-0 items-center justify-center rounded-xl bg-primary/10 p-3 transition-colors group-hover:bg-primary/15">
                 <stat.icon className="h-6 w-6 text-primary" />
               </div>
             </div>
