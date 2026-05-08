@@ -135,10 +135,10 @@ function StatusBadge({ status }: { status: ConsultationStatus }) {
 
 export function ConsultationsTable() {
   return (
-    <Card className="h-auto w-auto min-w-fit border-0 bg-card shadow-sm">
-      <CardHeader className="flex flex-row flex-wrap items-center justify-between gap-4 pb-4">
+    <Card className="h-full w-full border-0 bg-card shadow-sm">
+      <CardHeader className="flex flex-row flex-wrap items-center justify-between gap-4 border-b border-border pb-4">
         <div className="flex flex-col gap-1">
-          <CardTitle className="whitespace-nowrap text-xl font-semibold text-foreground">
+          <CardTitle className="text-xl font-semibold text-foreground">
             Consultations du Jour
           </CardTitle>
           <p className="text-sm text-muted-foreground">
@@ -146,9 +146,9 @@ export function ConsultationsTable() {
           </p>
         </div>
         <div className="flex shrink-0 items-center gap-2">
-          <div className="flex w-fit items-center gap-1.5 rounded-lg bg-secondary px-3 py-1.5">
+          <div className="flex items-center gap-1.5 rounded-lg bg-secondary px-3 py-1.5">
             <Clock className="h-4 w-4 shrink-0 text-muted-foreground" />
-            <span className="whitespace-nowrap text-sm font-medium text-foreground">
+            <span className="text-sm font-medium text-foreground">
               {new Date().toLocaleDateString("fr-FR", {
                 day: "numeric",
                 month: "long",
@@ -158,9 +158,9 @@ export function ConsultationsTable() {
           </div>
         </div>
       </CardHeader>
-      <CardContent className="w-auto">
-        <div className="w-fit min-w-full overflow-x-auto rounded-lg border border-border">
-          <table className="w-auto min-w-full">
+      <CardContent className="flex h-full flex-col p-0">
+        <div className="flex-1 overflow-x-auto">
+          <table className="w-full">
             <thead>
               <tr className="border-b border-border bg-muted/50">
                 <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -266,12 +266,12 @@ export function ConsultationsTable() {
           </table>
         </div>
         {/* Table footer */}
-        <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
-          <p className="whitespace-nowrap text-sm text-muted-foreground">
+        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border px-4 py-4">
+          <p className="text-sm text-muted-foreground">
             Affichage de <span className="font-medium text-foreground">8</span> consultations sur{" "}
             <span className="font-medium text-foreground">156</span>
           </p>
-          <div className="flex shrink-0 items-center gap-2">
+          <div className="flex items-center gap-2">
             <Button variant="outline" size="sm" disabled>
               Précédent
             </Button>
