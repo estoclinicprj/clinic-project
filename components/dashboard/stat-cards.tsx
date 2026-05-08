@@ -21,7 +21,7 @@ const stats = [
     description: "nouveaux ce mois",
   },
   {
-    title: "Consultations Aujourd&apos;hui",
+    title: "Consultations Aujourd'hui",
     value: "156",
     change: "+8.2%",
     changeType: "positive" as const,
@@ -50,7 +50,7 @@ export function StatCards() {
             <div className="flex items-start justify-between gap-4">
               <div className="flex flex-col gap-2">
                 <p className="whitespace-nowrap text-sm font-medium text-muted-foreground">
-                  {stat.title === "Consultations Aujourd'hui" ? "Consultations Aujourd'hui" : stat.title}
+                  {stat.title}
                 </p>
                 <div className="flex items-baseline gap-2">
                   <span className="text-3xl font-bold tracking-tight text-foreground">
