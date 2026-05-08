@@ -9,15 +9,21 @@ import {
   Users,
   ClipboardPlus,
   UserCheck,
+  Activity,
   CalendarCheck
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navItems = [
   {
-    label: "Tableau de bord",
+    label: "Dashboard",
     href: "/",
     icon: LayoutDashboard,
+  },
+  {
+    label: "Tableau de Bord",
+    href: "/tableau-de-bord",
+    icon: Activity,
   },
   {
     label: "Ajouter Patient",
