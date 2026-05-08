@@ -11,7 +11,7 @@ export default function DashboardPage() {
       <Sidebar />
 
       {/* Main Content */}
-      <main className="ml-64">
+      <main className="ml-64 min-h-screen">
         {/* Top Header */}
         <header className="sticky top-0 z-30 border-b border-border bg-card/80 backdrop-blur-sm">
           <div className="flex h-16 items-center justify-between px-8">
