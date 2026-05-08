@@ -1,6 +1,5 @@
 import { Sidebar } from "@/components/dashboard/sidebar"
 import { StatCards } from "@/components/dashboard/stat-cards"
-import { ConsultationsTable } from "@/components/dashboard/consultations-table"
 import { Bell, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -58,11 +57,6 @@ export default function DashboardPage() {
           {/* Stats Cards */}
           <section className="mb-8">
             <StatCards />
-          </section>
-
-          {/* Consultations Table */}
-          <section>
-            <ConsultationsTable />
           </section>
         </div>
       </main>
