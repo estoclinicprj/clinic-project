@@ -9,7 +9,8 @@ import {
   Users,
   ClipboardPlus,
   UserCheck,
-  Activity
+  Activity,
+  CalendarCheck
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -43,6 +44,11 @@ const navItems = [
     label: "Nouvelle Consultation",
     href: "/nouvelle-consultation",
     icon: ClipboardPlus,
+  },
+  {
+    label: "Consultations du Jour",
+    href: "/consultations-du-jour",
+    icon: CalendarCheck,
   },
   {
     label: "Liste des Patients",
